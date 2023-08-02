@@ -1,15 +1,22 @@
 package com.dharian.microservice.interfaces;
 
 import com.dharian.microservice.entidades.Equipo;
+import com.dharian.microservice.entidades.Jugador;
 
 import java.util.List;
 
 public interface IEquipo {
      /**
-      * Se usa para obtener los datos de un usuario filtrado por ID.
-      * @param id se consulta el user por este campo
+      *
+      * @param rol se consulta el user por este campo
       * @return una lista con los equipos hechos por rol.
       */
-     List<Equipo> getDataUser(int id);
+     List<Equipo> getDataUser(String rol);
+
+     /**
+      *
+      * @return Lista de todos los jugadores.
+      */
+     List<Jugador> getAllUsers();
 
 }

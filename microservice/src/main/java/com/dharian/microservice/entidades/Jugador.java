@@ -1,15 +1,29 @@
 package com.dharian.microservice.entidades;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import org.jetbrains.annotations.NotNull;
+import lombok.*;
 
-@Data
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 @AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@Entity
+@Table(name = "players")
 public class Jugador {
-    @NotNull
+
+    @Id
+    @Column(name="id", nullable= false)
     private Integer id;
-    private String nombre,apellido;
+    @Column(name="name", nullable = false)
+    private String nombre;
+    @Column(name= "surname", nullable = false)
+    private String apellido;
+    @Column(name="rol",nullable= false )
     private String posicion;
 
 }
