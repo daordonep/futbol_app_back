@@ -9,9 +9,9 @@ public interface IEquipo {
      /**
       *
       * @param rol se consulta el user por este campo
-      * @return una lista con los equipos hechos por rol.
+      * @return una lista con los jugadores por rol.
       */
-     List<Equipo> getDataUser(String rol);
+     List<Jugador> getUserByRol(String rol);
 
      /**
       *

@@ -18,11 +18,11 @@ public class ServicioREST {
     @Autowired
     IEquipo iEquipo;
 
-    @PostMapping(value="/getUserByRol")
-    ResponseEntity<List<Equipo>> getUserByRol(
+    @GetMapping(value="/getUserByRol")
+    ResponseEntity<List<Jugador>> getUserByRol(
             @RequestParam("rol") String rol){
 
-        return new ResponseEntity<>(iEquipo.getDataUser(rol), HttpStatus.OK);
+        return new ResponseEntity<>(iEquipo.getUserByRol(rol), HttpStatus.OK);
     }
     @GetMapping(value="/getAllUsers")
     ResponseEntity<List<Jugador>> getAllUsers(){

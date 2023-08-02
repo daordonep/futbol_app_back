@@ -10,7 +10,7 @@ import java.util.List;
 public interface Consultas extends CrudRepository<Jugador,Integer> {
 
     @Query(value = "select * from players " +
-            "where rol LIKE UPPER(:rol) ",nativeQuery = true)
+            "where rol LIKE (:rol) ",nativeQuery = true)
     List<Jugador> getPlayerByRol(@Param("rol") String rol);
 
     @Query(value = "select * from players",nativeQuery = true)

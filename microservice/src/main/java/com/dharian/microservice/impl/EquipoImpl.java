@@ -17,12 +17,11 @@ public class EquipoImpl implements IEquipo {
 
    @Autowired
    Consultas consultas;
-
-    public List<Equipo> getDataUser(String rol) {
-        List<Equipo> equiposList= new ArrayList<>();
+    @Override
+    public List<Jugador> getUserByRol(String rol) {
         log.info("Rol recibido: "+ rol);
 
-        return equiposList;
+        return consultas.getPlayerByRol(rol);
     }
 
     @Override
