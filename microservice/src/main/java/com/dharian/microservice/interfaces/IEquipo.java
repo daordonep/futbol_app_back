@@ -19,4 +19,10 @@ public interface IEquipo {
       */
      List<Jugador> getAllUsers();
 
+     /**
+      * Genera los equipos por roles
+      * @return una lista de dos equipos formado por 3 defensas, 3 medios y 1 delantero.
+      */
+     List<Equipo> generateTeams();
+
 }

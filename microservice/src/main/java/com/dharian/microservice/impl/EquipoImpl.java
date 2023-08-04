@@ -8,7 +8,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -28,5 +27,11 @@ public class EquipoImpl implements IEquipo {
     public List<Jugador> getAllUsers() {
 
         return consultas.getAllPlayers();
+    }
+
+    @Override
+    public List<Equipo> generateTeams() {
+
+        return null;
     }
 }

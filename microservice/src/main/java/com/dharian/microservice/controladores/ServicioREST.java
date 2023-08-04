@@ -29,4 +29,10 @@ public class ServicioREST {
 
         return new ResponseEntity<>(iEquipo.getAllUsers(),HttpStatus.OK);
     }
+
+    @PostMapping(value="/generateTeams")
+    ResponseEntity<List<Equipo>> generateTeams(){
+
+        return new ResponseEntity<>(iEquipo.generateTeams(),HttpStatus.OK);
+    }
 }
